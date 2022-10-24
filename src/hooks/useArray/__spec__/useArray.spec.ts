@@ -1,5 +1,5 @@
 import { renderHook, act } from "@testing-library/react-hooks";
-import useArray from ".";
+import useArray from "..";
 
 describe("useArray tests", () => {
   it("[push] should push new item from the array (object)", () => {
