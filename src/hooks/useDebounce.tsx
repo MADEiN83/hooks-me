@@ -7,9 +7,13 @@ import useTimeout from "./useTimeout";
  * @param delay Delay in ms
  * @param dependencies If present, effect will only activate if the values in the list change.
  */
-const useDebounce = (callback: () => void, delay: number, dependencies: []) => {
+const useDebounce = (
+  callback: () => void,
+  delay: number,
+  dependencies?: any[]
+) => {
   const { reset, clear } = useTimeout(callback, delay);
-  useEffect(reset, [...dependencies, reset]);
+  useEffect(reset, [...(dependencies || []), reset]);
   useEffect(clear, []);
 };
 
