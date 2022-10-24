@@ -8,3 +8,5 @@ export { default as useIsVisible } from "./hooks/useIsVisible";
 export { default as useWindowSize } from "./hooks/useWindowSize";
 export { default as useValidatedState } from "./hooks/useValidatedState";
 export { default as useEffectOnce } from "./hooks/useEffectOnce";
+export { default as useRenderCount } from "./hooks/useRenderCount";
+export { default as useDebug } from "./hooks/useDebug";
