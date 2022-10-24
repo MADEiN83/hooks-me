@@ -1,6 +1,6 @@
 {
-  "name": "hook-me",
-  "version": "1.0.0",
+  "name": "hooks-me",
+  "version": "0.0.1",
   "description": "",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
@@ -11,8 +11,21 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "react",
+    "hook",
+    "typescript",
+    "react hooks"
+  ],
+  "author": "Anthony DI STEFANO",
+  "homepage": "https://github.com/MADEiN83/hook-me",
+  "bugs": {
+    "url": "https://github.com/MADEiN83/hook-me/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MADEiN83/hook-me.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.19.4",
@@ -33,5 +46,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
