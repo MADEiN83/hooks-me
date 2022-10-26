@@ -24,15 +24,15 @@ const Component = () => {
 
 ### API
 
-| name   | description                                               | usage                    |     |     |
-| ------ | --------------------------------------------------------- | ------------------------ | --- | --- |
-| value  | The value as `array` of `T`                               | -                        |     |     |
-| push   | Push a new value to the end of the current `array` of `T` | `push(7)`                |     |     |
-| clear  | Clear all items. Value will be `[]`                       | `clear()`                |     |     |
-| filter | Filter items                                              | `filter((id) => id < 5)` |     |     |
-| remove | Remove an item with its index                             | `remove(9)`              |     |     |
-| set    | Set the value of `array`                                  | `set([1, 4, 7])`         |     |     |
-| update | Replace an item                                           | `update(0, 12)`          |     |     |
+| name   | description                                               | usage                    |
+| ------ | --------------------------------------------------------- | ------------------------ |
+| value  | The value as `array` of `T`                               | -                        |
+| push   | Push a new value to the end of the current `array` of `T` | `push(7)`                |
+| clear  | Clear all items. Value will be `[]`                       | `clear()`                |
+| filter | Filter items                                              | `filter((id) => id < 5)` |
+| remove | Remove an item with its index                             | `remove(9)`              |
+| set    | Set the value of `array`                                  | `set([1, 4, 7])`         |
+| update | Replace an item                                           | `update(0, 12)`          |
 
 ## useEffectOnce
 
