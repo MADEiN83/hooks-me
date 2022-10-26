@@ -30,7 +30,7 @@ const useArray = <T,>(defaultValue: T[]) => {
     setArray([]);
   };
 
-  return { array, push, update, remove, filter, set: setArray, clear };
+  return { value: array, push, update, remove, filter, set: setArray, clear };
 };
 
 export default useArray;
