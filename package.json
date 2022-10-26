@@ -18,13 +18,13 @@
     "react hooks"
   ],
   "author": "Anthony DI STEFANO",
-  "homepage": "https://github.com/MADEiN83/hook-me",
+  "homepage": "https://github.com/MADEiN83/hooks-me",
   "bugs": {
-    "url": "https://github.com/MADEiN83/hook-me/issues"
+    "url": "https://github.com/MADEiN83/hooks-me/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MADEiN83/hook-me.git"
+    "url": "https://github.com/MADEiN83/hooks-me.git"
   },
   "license": "ISC",
   "devDependencies": {
