@@ -15,7 +15,7 @@ describe("useArray tests", () => {
       result.current.push({ title: "Item04" });
     });
 
-    expect(result.current.array).toEqual([
+    expect(result.current.value).toEqual([
       { title: "Item01" },
       { title: "Item02" },
       { title: "Item03" },
@@ -30,7 +30,7 @@ describe("useArray tests", () => {
       result.current.push(4);
     });
 
-    expect(result.current.array).toEqual([1, 2, 3, 4]);
+    expect(result.current.value).toEqual([1, 2, 3, 4]);
   });
 
   it("[update] should update item", () => {
@@ -40,7 +40,7 @@ describe("useArray tests", () => {
       result.current.update(0, 65);
     });
 
-    expect(result.current.array).toEqual([65, 2, 3]);
+    expect(result.current.value).toEqual([65, 2, 3]);
   });
 
   it("[remove] should remove item", () => {
@@ -50,7 +50,7 @@ describe("useArray tests", () => {
       result.current.remove(1);
     });
 
-    expect(result.current.array).toEqual([1, 3]);
+    expect(result.current.value).toEqual([1, 3]);
   });
 
   it("[filter] should filter items", () => {
@@ -60,7 +60,7 @@ describe("useArray tests", () => {
       result.current.filter((n) => n === 1);
     });
 
-    expect(result.current.array).toEqual([1]);
+    expect(result.current.value).toEqual([1]);
   });
 
   it("[clear] should clear array", () => {
@@ -70,7 +70,7 @@ describe("useArray tests", () => {
       result.current.clear();
     });
 
-    expect(result.current.array).toEqual([]);
+    expect(result.current.value).toEqual([]);
   });
 
   it("[set] should set array", () => {
@@ -80,6 +80,6 @@ describe("useArray tests", () => {
       result.current.set([11, 12, 13]);
     });
 
-    expect(result.current.array).toEqual([11, 12, 13]);
+    expect(result.current.value).toEqual([11, 12, 13]);
   });
 });
