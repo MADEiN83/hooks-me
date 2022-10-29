@@ -1,5 +1,19 @@
 # hooks-me
 
+## installation
+
+Via NPM
+
+```
+npm i hooks-me
+```
+
+Via Yarn
+
+```
+yarn add hooks-me
+```
+
 ## useArray
 
 Easy way to manage array as state. You can pass any `Type` you want as `T`.
