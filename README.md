@@ -302,6 +302,8 @@ import { type FC } from "react";
 import { useWindowSize } from "hooks-me";
 
 const Component: FC = () => {
+  const [width, height] = useWindowSize();
+
   return (
     <>
       <div>Width: {width}</div>
