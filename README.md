@@ -1,18 +1,15 @@
-# hooks-me
+<div align="center">
+<h1>hooks-me</h1>
+<div>React useful hooks.</div>
 
-## installation
+![npm](https://img.shields.io/npm/v/hooks-me?style=flat-square)
+![npm](https://img.shields.io/npm/dm/hooks-me?style=flat-square) ![npm](https://img.shields.io/npm/dt/hooks-me?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/hooks-me?style=flat-square)
 
-Via NPM
+<pre>yarn add <a href="https://www.npmjs.com/package/hooks-me">hooks-me</a></pre>
 
-```
-npm i hooks-me
-```
+</div>
 
-Via Yarn
-
-```
-yarn add hooks-me
-```
+<hr />
 
 ## useArray
 
