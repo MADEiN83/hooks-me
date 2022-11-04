@@ -68,7 +68,16 @@ const Component = () => {
 
 ## useToggle
 
-TODO
+Act like `useState` to provide:
+
+- the current value as `boolean`
+- a setter with one non-mandatory argument
+
+Simple usage:
+
+- `toggleValue(true);` -> sets the value to `true`
+- `toggleValue(false);` -> sets the value to `false`
+- `toggleValue();` -> sets the value as the opposite of the actual value (t'as compris)
 
 ### usage
 
@@ -88,11 +97,6 @@ const Component = () => {
   );
 };
 ```
-
-The `toggleValue` event (you can name it like you want btw) accepts:
-
-- `boolean`
-- `undefined` (meaning "toggle" the actual value)
 
 ## useValidatedState
 
