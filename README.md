@@ -100,17 +100,23 @@ const Component = () => {
 
 ## useValidatedState
 
-TODO
+Pimped version of the `useState`. It's the same behaviour (current value + setter), but you have to provide a second argument to the hook: **the validator**.
+
+Validator is just.. a method with only one argument that returns a `boolean` value. The first argument is of the same type as you defined the hook.
 
 ### usage
 
 ```tsx
 import { useValidatedState } from "hooks-me";
 
+const checkIfValueIsValid = (value: string): boolean => {
+  return value !== "famous";
+};
+
 const Component = () => {
-  const [name, setName, nameIsValid] = useValidatedState<string | undefined>(
+  const [name, setName, nameIsValid] = useValidatedState<string>(
     "famous",
-    (val) => val !== "famous"
+    checkIfValueIsValid
   );
 
   return (
