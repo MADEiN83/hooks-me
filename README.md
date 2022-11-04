@@ -50,7 +50,7 @@ const Component = () => {
 
 ## useEffectOnce
 
-TODO
+It's simply an upgraded version of the `useEffect`. You don't have to pass any dependencies as second argument. Only your logic is needed. Voila.
 
 ### usage
 
