@@ -1,18 +1,15 @@
-# hooks-me
+<div align="center">
+<h1>hooks-me</h1>
+<div>React useful hooks.</div>
 
-## installation
+![npm](https://img.shields.io/npm/v/hooks-me?style=flat-square)
+![npm](https://img.shields.io/npm/dm/hooks-me?style=flat-square) ![npm](https://img.shields.io/npm/dt/hooks-me?style=flat-square) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/hooks-me?style=flat-square)
 
-Via NPM
+<pre>yarn add <a href="https://www.npmjs.com/package/hooks-me">hooks-me</a></pre>
 
-```
-npm i hooks-me
-```
+</div>
 
-Via Yarn
-
-```
-yarn add hooks-me
-```
+<hr />
 
 ## useArray
 
@@ -50,7 +47,7 @@ const Component = () => {
 
 ## useEffectOnce
 
-TODO
+It's simply an upgraded version of the `useEffect`. You don't have to pass any dependencies as second argument. Only your logic is needed. Voila.
 
 ### usage
 
@@ -68,7 +65,16 @@ const Component = () => {
 
 ## useToggle
 
-TODO
+Act like `useState` to provide:
+
+- the current value as `boolean`
+- a setter with one non-mandatory argument
+
+Simple usage:
+
+- `toggleValue(true);` -> sets the value to `true`
+- `toggleValue(false);` -> sets the value to `false`
+- `toggleValue();` -> sets the value as the opposite of the actual value (t'as compris)
 
 ### usage
 
@@ -89,24 +95,25 @@ const Component = () => {
 };
 ```
 
-The `toggleValue` event (you can name it like you want btw) accepts:
-
-- `boolean`
-- `undefined` (meaning "toggle" the actual value)
-
 ## useValidatedState
 
-TODO
+Pimped version of the `useState`. It's the same behaviour (current value + setter), but you have to provide a second argument to the hook: **the validator**.
+
+Validator is just.. a method with only one argument that returns a `boolean` value. The first argument is of the same type as you defined the hook.
 
 ### usage
 
 ```tsx
 import { useValidatedState } from "hooks-me";
 
+const checkIfValueIsValid = (value: string): boolean => {
+  return value !== "famous";
+};
+
 const Component = () => {
-  const [name, setName, nameIsValid] = useValidatedState<string | undefined>(
+  const [name, setName, nameIsValid] = useValidatedState<string>(
     "famous",
-    (val) => val !== "famous"
+    checkIfValueIsValid
   );
 
   return (
@@ -292,6 +299,8 @@ import { type FC } from "react";
 import { useWindowSize } from "hooks-me";
 
 const Component: FC = () => {
+  const [width, height] = useWindowSize();
+
   return (
     <>
       <div>Width: {width}</div>
