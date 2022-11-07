@@ -16,7 +16,11 @@ const useStorage = <T,>(
   const [value, setValue] = useState<T | undefined>(() => {
     const jsonValue = storageObject.getItem(key);
     if (jsonValue != null) {
-      return JSON.parse(jsonValue);
+      try {
+        return JSON.parse(jsonValue);
+      } catch {
+        return jsonValue;
+      }
     }
 
     return defaultValue;
