@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import useRenderCount from "./useRenderCount";
+import useRenderCount from "../useRenderCount";
 
 const useDebug = (componentName: string, props: any) => {
   const count = useRenderCount();
