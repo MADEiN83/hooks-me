@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 
-import useRenderCount from "../../useRenderCount";
+import useRenderCount from "..";
 
 const MockedComponent: FC = () => {
   const [, setvalue] = useState(0);
