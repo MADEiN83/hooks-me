@@ -41,5 +41,3 @@ const useStorage = <T,>(
 
   return [value, setValue, remove];
 };
-
-export default useStorage;
