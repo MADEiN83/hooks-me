@@ -31,7 +31,6 @@ const useStorage = <T,>(
       return storageObject.removeItem(key);
     }
 
-    // TODO: JSON.strigify only if it's not a string... :/
     storageObject.setItem(key, JSON.stringify(value));
   }, [key, value, storageObject]);
 
